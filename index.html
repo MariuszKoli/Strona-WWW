@@ -109,8 +109,33 @@
           </section>
       </div>
       <p>tekst</p>
-
+    
       <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>-->
       <script src="js/bootstrap.bundle.min.js"></script>
+
+
+     <script>
+        //tablica
+        var objectsArray = [
+            { name: 'Obiekt1', value: 10, category: 'A' },
+            { name: 'Obiekt2', value: 20, category: 'B' },
+            { name: 'Obiekt3', value: 30, category: 'C' }
+        ];
+
+        // przycisk
+        var button = document.createElement('button');
+        button.innerHTML = 'Pokaż obiekty';
+        document.body.appendChild(button);
+
+       // zdarzenie
+        button.addEventListener('click', function() {
+            objectsArray.forEach(function(obj) {
+                console.log('Nazwa:', obj.name);
+                console.log('Wartość:', obj.value);
+                console.log('Kategoria:', obj.category);
+                console.log('----------------');
+            });
+        });
+    </script>
 </body>
 </html>
